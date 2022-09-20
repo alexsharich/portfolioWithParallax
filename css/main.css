@@ -94,6 +94,7 @@ z-index: 0;
   color:var(--text);
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   position: relative;
   text-align: center ;
@@ -117,21 +118,25 @@ will-change: transform;
 .content{
   will-change: transform;
 }
-.contacts{
+.contacts, .about, .skills{
   position: absolute;
-  float: right;
   bottom: calc(var(--index)*5);
-  right: calc(var(--index)*5);
   opacity: .45;
   font-size: calc(var(--index)*1.75);
   letter-spacing: calc(var(--index)/ 35.75);
   cursor: pointer;
   transition: all .5s ease;
 }
-.contacts:hover{
+.contacts-button:hover, .about-button:hover , .skills-button:hover{
   color:var(--text);
   text-shadow: 0 0 15px #dec33d;
   transform: scale(1.02);
+}
+.contacts {
+  right: calc(var(--index)*5);
+}
+.about {
+  left: calc(var(--index)*5);
 }
 .copy {
   position: absolute;
@@ -140,3 +145,10 @@ will-change: transform;
   font-size: calc(var(--index)*.75);
   letter-spacing: calc(var(--index)/ 35.75);
 }
+.hidden {
+  display: none;
+}
+
+
+
+
